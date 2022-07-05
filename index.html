@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Validar CPF</title>
+  </head>
+  <body>
+    <main>
+      <div class="form-container">
+        <header class="header">
+          <h1>Validar CPF</h1>
+          <h3>
+            Informe o CPF que deseja conferir na caixa de texto abaixo e clique
+            sobre o botão "Validar CPF".
+          </h3>
+        </header>
+        <form id="form-validar-cpf">
+          <input
+            id="cpf"
+            type="text"
+            required
+            placeholder="Digite seu CPF aqui"
+            autofocus
+            maxlength="11"
+            pattern="[\d]{11}"
+            size="11"
+          />
+          <button type="submit" id="submit-button">Validar CPF</button>
+        </form>
+
+        <strong id="invalid-cpf-box" class=""
+          >CPF inválido, verifique o número de digitos!</strong
+        >
+
+        <div id="res-box" class="">
+          <p>
+            Seu CPF de número
+            <strong id="input-cpf"></strong> é
+            <strong id="input-status"></strong>!
+          </p>
+
+          <p id="region-box" class="">
+            O documento foi emitido na Região Fiscal
+            <strong id="input-region">DF</strong>
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
