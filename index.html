@@ -17,15 +17,17 @@
             texto abaixo e clique sobre o botão "Validar CPF".
           </h3>
         </header>
+        
         <form id="form-validar-cpf">
           <input
-            id="cpf"
-            type="text"
-            required
-            placeholder="Digite seu CPF aqui"
             autofocus
+            id="cpf"
             maxlength="11"
-            pattern="[\d]{11}"
+            name="cpf"
+            pattern="([\d]{11})"
+            placeholder="Digite seu CPF aqui"
+            required
+            type="text"
           />
           <button type="submit" id="submit-button">Validar CPF</button>
         </form>
